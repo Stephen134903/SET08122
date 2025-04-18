@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Tribal Ally</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>You gain the tribe's trust. They guide you to a safe clearing where a helicopter arrives. You're saved and forever changed by the experience.</p>
+    </div>
+
+    <img src="images/jungle-right-end1.jpg" alt="Jungle scene" class="SceneImage" />
+
+  </div>
+  <script>
+    speakText(document.querySelector(".TextContainer p").innerText);
+  </script>
+</body>
+</html>

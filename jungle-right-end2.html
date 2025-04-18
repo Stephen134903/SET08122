@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Outcast</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>Your actions earn the tribe's distrust. They vanish into the forest, leaving you lost and alone in the jungle. No one comes to help.</p>
+    </div>
+
+    <img src="images/jungle-right-end2.webp" alt="Jungle scene" class="SceneImage" />
+
+  </div>
+  <script>
+    speakText(document.querySelector(".TextContainer p").innerText);
+  </script>
+</body>
+</html>

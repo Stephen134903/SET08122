@@ -1,0 +1,125 @@
+/* ========== GENERAL STYLES ========== */
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+    background-color: #1b3a1b;
+    color: #fff;
+  }
+  
+  /* ========== HEADER ========== */
+  header {
+    background-color: #2d5b2d;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #f2f2f2;
+  }
+  
+  .NavButtons button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .NavButtons button:hover {
+    background-color: #388e3c;
+  }
+  
+  /* ========== MAIN CONTAINER ========== */
+  .GameContainer {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* ========== BACKGROUND STYLING ========== */
+  .GameContainer.Jungle {
+    background-image: url('https://images.unsplash.com/photo-1587049352859-d36f1b59e4be');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    width: 100%;
+  }
+  
+  /* ========== TEXT & STORY BOX ========== */
+  .TextContainer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+/* ========== Scene Image ========== */
+.SceneImage {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    margin: 1.5rem 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  /* ========== TIMER BAR ========== */
+  #timerBar {
+    height: 12px;
+    background-color: limegreen;
+    border-radius: 6px;
+    margin-top: 1rem;
+    transition: width 1s linear;
+    width: 100%;
+  }
+  
+  /* ========== CHOICE BUTTONS ========== */
+  .ActionButton {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    margin: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .ActionButton:hover {
+    background-color: #2e7d32;
+  }
+  
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 600px) {
+    .TextContainer {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    .ActionButton {
+      width: 100%;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .NavButtons {
+      margin-top: 1rem;
+    }
+  }
+  

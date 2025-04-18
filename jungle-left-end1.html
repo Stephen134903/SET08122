@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Escape Success</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>You manage to escape. You decide to follow a stream thinking it must run to a ocean or village, Luckily you run into explorers and they rescue you. You survived the jungle!</p>
+    </div>
+
+    <img src="images/jungle-left-end1.jpg" alt="Jungle scene" class="SceneImage" />
+
+  </div>
+  <script>
+    speakText(document.querySelector(".TextContainer p").innerText);
+  </script>
+</body>
+</html>
