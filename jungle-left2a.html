@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Snake Encounter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>Behind the tree, a snake slithers toward you. Do you scare it away or stay still?</p>
+      <div id="timerBar"></div>
+    </div>
+
+    <img src="images/jungle-left2a.jpg" alt="Jungle scene" class="SceneImage" />
+
+
+    <button class="ActionButton" onclick="choose('jungle-left-end1.html')">Scare it away</button>
+    <button class="ActionButton" onclick="choose('jungle-left-end2.html')">Stay still</button>
+  </div>
+  <script>
+    const text = document.querySelector(".TextContainer p")?.innerText;
+    if (text) speakText(text);
+    startTimer(10, "jungle-left-end2.html");
+  </script>
+</body>
+</html>
