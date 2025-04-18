@@ -1,0 +1,32 @@
+<!--================ jungle-left-end2.html ================-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Nature Wins</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>The animal finds you. The jungle claims another traveler. You are never seen again.</p>
+    </div>
+    
+    <img src="images/jungle-left-end2.jpg" alt="Jungle scene" class="SceneImage" />
+  </div>
+
+ 
+
+  <script>
+    speakText(document.querySelector(".TextContainer p").innerText);
+  </script>
+</body>
+</html>

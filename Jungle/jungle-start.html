@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle Story | Text Adventure</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>You wake up in a dense jungle with no clue how you got there. A narrow path lies ahead. Do you go left or right?</p>
+      <div id="timerBar" style="height: 10px; background-color: limegreen; width: 100%; margin-top: 10px;"></div>
+    </div>
+
+    <img src="images/jungle-start.jpg" alt="Jungle scene" class="SceneImage" />
+
+    <button class="ActionButton" onclick="location.href='jungle-left1.html'">Go Left</button>
+    <button class="ActionButton" onclick="location.href='jungle-right1.html'">Go Right</button>
+  </div>
+  <script>
+    const text = document.querySelector(".TextContainer p")?.innerText;
+    if (text) speakText(text);
+    setUndo(window.location.href);
+    startTimer(10, "jungle-left1.html");
+  </script>
+</body>
+</html>
