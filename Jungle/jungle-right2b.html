@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Tribal Test</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>The tribe offers you a test of courage. If you pass, you gain their trust. What do you do?</p>
+      <div id="timerBar"></div>
+    </div>
+
+    <img src="images/jungle-right2b.jpg" alt="Jungle scene" class="SceneImage" />
+
+    <button class="ActionButton" onclick="choose('jungle-right-end1.html')">Accept the challenge</button>
+    <button class="ActionButton" onclick="choose('jungle-right-end2.html')">Sneak away</button>
+  </div>
+  <script>
+    const text = document.querySelector(".TextContainer p")?.innerText;
+    if (text) speakText(text);
+    startTimer(10, "jungle-right-end2.html");
+  </script>
+</body>
+</html>

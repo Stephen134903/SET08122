@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jungle - Tribal Encounter</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+<body onload="onPageLoad()">
+  <header>
+    <h1>Jungle Adventure</h1>
+    <div class="NavButtons">
+      <button onclick="location.href='../../index.html'">Home</button>
+      <button onclick="location.href='jungle-start.html'">Restart</button>
+      <button onclick="undo()">Undo</button>
+    </div>
+  </header>
+  <div class="GameContainer Jungle">
+    <div class="TextContainer">
+      <p>A hidden tribe approaches. One of them offers you a strange fruit. Do you eat it or politely decline?</p>
+      <div id="timerBar"></div>
+    </div>
+
+    <img src="images/jungle-right1.jpg" alt="Jungle scene" class="SceneImage" />
+
+
+    <button class="ActionButton" onclick="choose('jungle-right2a.html')">Eat the fruit</button>
+    <button class="ActionButton" onclick="choose('jungle-right2b.html')">Refuse politely</button>
+  </div>
+  <script>
+    const text = document.querySelector(".TextContainer p")?.innerText;
+    if (text) speakText(text);
+    startTimer(10, "jungle-right2b.html");
+  </script>
+</body>
+</html>
